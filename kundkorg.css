@@ -1,0 +1,602 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100vw;
+}
+
+header {
+  height: 100px;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+main {
+  background-color: #f8f9fa;
+  flex-grow: 1;
+}
+
+h1 {
+  font-family: "Bebas Neue", sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  border-bottom: solid 1px black;
+  margin-bottom: 5%;
+}
+
+main h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5rem;
+  border-bottom: solid 2px black;
+}
+
+/*Header*/
+.icon {
+  width: 5vw;
+}
+
+.icon:hover {
+  transform: scale(1.5);
+  transition: 0.4s;
+}
+
+#logo {
+  width: 40vw;
+}
+
+.searchcontainer {
+  order: 3;
+}
+
+#search {
+  width: 70vw;
+  height: 30px;
+  border-radius: 13px;
+}
+
+#searchbutton {
+  margin-top: -50px;
+  width: 14vw;
+  background-color: #b60000;
+  border-radius: 12px;
+  border: 2px solid #a20303;
+  color: white;
+  width: 60px;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px black;
+}
+
+#searchbutton:hover {
+  background-color: #a20303;
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+nav {
+  background-color: #b60000;
+  height: 100px;
+}
+
+/*Hamburger menu*/
+#hamburgernav {
+  height: 100%;
+}
+
+#hamburger {
+  display: none;
+}
+
+#hamburgeritems {
+  display: none;
+}
+
+#hamburgeritems a {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1px solid black;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px black;
+  letter-spacing: 1px;
+}
+
+#hamburgernav input:checked ~ #hamburgeritems {
+  display: block;
+}
+
+#hamburgernav label {
+  display: inline-block;
+  color: white;
+  font-size: 1.2em;
+  padding: 10px;
+}
+
+#hamburgeritems a:hover {
+  background-color: #a20303;
+}
+
+
+/*Checkout*/
+.mainflex {
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 1px;
+}
+
+#checkoutproducts {
+  display: grid;
+  text-align: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 33px 40px auto;
+  grid-template-areas:
+    "heading heading heading"
+    "products amount productprice"
+    "img amountmenu totalprice";
+}
+
+#productstitle {
+  grid-area: products;
+}
+
+#amounttitle {
+  grid-area: amount;
+}
+
+#productprice {
+  grid-area: productprice;
+}
+
+.products p {
+  grid-area: totalprice;
+}
+
+#productheading {
+  width: 100%;
+  height: 33px;
+  grid-area: heading;
+}
+
+#vat {
+  font-size: 1rem;
+}
+
+#vat,
+#vat + p {
+  margin-top: -12px;
+}
+
+.products {
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: "DM Serif Display", serif;
+}
+
+.products img {
+  grid-area: img;
+  width: 100px;
+  height: 100px;
+  border: solid 3px black;
+  border-radius: 10px;
+}
+
+.products + p,
+#amountmenu,
+img + p {
+  font-family: "DM Serif Display", serif;
+  font-weight: lighter;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+#amountmenu {
+  grid-area: amountmenu;
+  justify-self: center;
+  width: 3rem;
+  height: 1.5rem;
+}
+
+.summaflex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.summaflex p {
+  padding: 6px;
+  margin-top: 4px;
+  margin-right: 1rem;
+}
+
+.summaflex h3 {
+  width: 45%;
+  padding: 6px;
+}
+
+.summaflex p {
+  padding-top: 4px;
+  text-align: center;
+}
+
+.checkout {
+  background-color: #e9ecef;
+  height: 100%;
+  width: 80%;
+  margin-bottom: 20%;
+  margin-left: 10%;
+  text-align: center;
+  box-shadow: 1px 1px 5px grey, -1px -1px 5px grey;
+  font-family: sans-serif;
+}
+
+/*Form*/
+form {
+  display: grid;
+  width: 100%;
+  justify-items: center;
+  text-align: center;
+  font-size: 1.1rem;
+  font-family: "DM Serif Display", serif;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(9, 1fr);
+  grid-template-areas:
+    "förnamn förnamn"
+    "efternamn efternamn"
+    "land land"
+    "adress adress"
+    "postnr postnr"
+    "ort ort"
+    "email email"
+    "telenr telenr"
+    "button button";
+}
+
+.firstname {
+  grid-area: förnamn;
+  margin-top: 10px;
+}
+.secondname {
+  grid-area: efternamn;
+  margin-top: 10px;
+}
+
+.address {
+  grid-area: adress;
+}
+
+.postcode {
+  grid-area: postnr;
+}
+
+.city {
+  grid-area: ort;
+}
+
+.land {
+  grid-area: land;
+}
+
+.email {
+  grid-area: email;
+}
+
+.phonenumb {
+  grid-area: telenr;
+}
+
+.firstname,
+.secondname,
+.address,
+.postcode,
+.city,
+.land,
+.email,
+.phonenumb {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+main input,
+#land {
+  width: 15em;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#continue {
+  width: 90px;
+  height: 1.5rem;
+  background-color: #ff0000;
+  border-radius: 12px;
+  border: solid 2px black;
+  font-family: sans-serif;
+  margin: 10px;
+  grid-area: button;
+  justify-self: center;
+}
+
+#continue:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+/*Footer*/
+footer {
+  height: 300px;
+  background-color: black;
+  color: white;
+  display: grid;
+  position: relative;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "left right"
+    " socialmedia socialmedia"
+    "copyright copyright";
+  padding: 15px;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 2px;
+}
+
+.about-right {
+  grid-area: right;
+}
+
+.about-left {
+  grid-area: left;
+}
+
+.socialmedia {
+  grid-area: socialmedia;
+  margin-top: 50px;
+}
+
+#copyright {
+  grid-area: copyright;
+  position: absolute;
+  bottom: 0;
+}
+
+.about li {
+  list-style-type: "- ";
+}
+
+footer h4 {
+  font-size: 1.5rem;
+  border-bottom: 2px solid white;
+  margin-bottom: 10px;
+}
+
+.about-right li:nth-child(3):hover {
+  transform: scale(1.2);
+  transition: 0.3s;
+}
+
+.about-left li:hover {
+  transform: scale(1.2);
+  transition: 0.3s;
+}
+
+#copyright {
+  text-align: center;
+}
+
+.fa-brands {
+  font-size: 32px;
+  color: white;
+  margin: 0 10px 0 10px;
+}
+
+.fa-brands:hover {
+  transform: scale(1.2);
+  transition: 0.3s;
+}
+
+/*Media queries*/
+@media (min-width: 650px) {
+  header {
+    height: 100px;
+  }
+
+  .icons {
+    order: 3;
+    align-self: center;
+    margin-right: 2%;
+  }
+
+  .icon {
+    width: 30%;
+  }
+
+  #logo {
+    order: 1;
+    width: 10rem;
+    align-self: center;
+    margin-left: 10%;
+  }
+
+  .searchcontainer {
+    flex-grow: 1;
+    margin-left: 10%;
+  }
+
+  #search {
+    width: 60%;
+    height: 35px;
+    order: 2;
+    border-radius: 13px;
+  }
+
+  #searchbutton {
+    width: 80px;
+    font-size: 1.1rem;
+  }
+
+  form {
+    justify-content: center;
+    column-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+      "förnamn efternamn"
+      "land adress"
+      "postnr ort"
+      "email telenr"
+      "button button";
+  }
+
+  main input,
+  #land {
+    width: 240px;
+    height: 25px;
+    margin-left: 0;
+  }
+
+  #checkoutsum,
+  #checkoutproducts {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
+
+  .checkout {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  footer {
+    margin-top: -100px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 100vw) {
+  form {
+    width: 700px;
+  }
+
+  .checkout {
+    width: 700px;
+  }
+}
+
+@media (min-width: 1175px) and (max-width: 100vw) {
+  .mainflex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 12%;
+  }
+
+  #checkoutsum,
+  #checkoutproducts {
+    height: 200px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  form {
+    height: 220px;
+  }
+
+  #logo {
+    width: 15rem;
+    margin-left: 10rem;
+  }
+
+  .icons {
+    margin-right: 9%;
+  }
+
+  .icon {
+    width: 30%;
+    padding: 5px;
+  }
+
+  #search {
+    width: 70%;
+    height: 40px;
+    order: 2;
+    border-radius: 18px;
+  }
+
+  #searchbutton {
+    width: 90px;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 3px black;
+  }
+
+  .firstname,
+  .secondname,
+  .address,
+  .postcode,
+  .city,
+  .land,
+  .email,
+  .phonenumb {
+    margin: 4%;
+  }
+
+  #continue {
+    font-size: 1rem;
+    margin-right: 30px;
+    height: 35px;
+    width: 110px;
+  }
+
+  #hamburgeritems {
+    margin-left: 8%;
+    border: 0px;
+  }
+
+  footer {
+    margin-top: 100px;
+  }
+
+  .fa-brands {
+    font-size: 40px;
+  }
+}
+
+/*Hamburger menu*/
+@media (min-width: 650px) {
+  #hamburgernav label,
+  #hamburger {
+    display: none;
+  }
+
+  #hamburgernav {
+    height: 50px;
+  }
+
+  #hamburgeritems {
+    display: flex;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.2rem;
+  }
+
+  #hamburgeritems a {
+    border-top: none;
+  }
+}

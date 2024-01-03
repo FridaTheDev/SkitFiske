@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkitFiske - Kundkorg</title>
+  <meta name="description" content="SkitFiskes kundkorg. Den digitala kundkorgen där dina valda produkter placeras.">
+
+  <script src="https://kit.fontawesome.com/9d183035fc.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=DM+Serif+Display&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="kundkorg.css">
+</head>
+
+<body>
+  <header>
+    <a href="index.html"><img src="ikoner/skitfiske33.png" alt="logga" id="logo"></a>
+
+    <div class="searchcontainer">
+      <input type="search" id="search" name="search" placeholder="Sök efter produkter..">
+      <button id="searchbutton">Sök</button>
+    </div>
+
+    <div class="icons">
+      <a href=""><img src="ikoner/supp24.png" alt="Support" class="icon"></a>
+      <a href=""><img src="ikoner/user24.png" alt="Profil" class="icon"></a>
+      <a href=""><img src="ikoner/cart24.png" alt="Kundvagn" class="icon"></a>
+    </div>
+  </header>
+
+  <!--Försök till hamburgemeny-->
+  <nav id="hamburgernav">
+    <label for="hamburger">&#9776;</label>
+    <input type="checkbox" id="hamburger">
+
+    <!--Meny iteams-->
+    <div id="hamburgeritems">
+      <a href="">Fiskeutrustning</a>
+      <a href="">Kläder</a>
+      <a href="">Förvaring</a>
+      <a href="">Tillbehör</a>
+      <a href="">Båttillbehör</a>
+      <a href="">Nyheter</a>
+      <a href="">Kampanj</a>
+    </div>
+  </nav>
+  <!--menyn slutar-->
+
+  <main>
+    <h1>Kundvagn</h1>
+    <div class="mainflex">
+
+      <!--sektion nr1 - kundvagn-->
+      <section class="checkout" id="checkoutproducts">
+        <h2 id="productheading">Produkter</h2>
+
+        <h3 class="products" id="productstitle">Produkter</h3>
+        <div class="products">
+          <img src="fiskedrag/spinns.jpg" alt="Spinnare">
+          <p>Spinnare</p>
+        </div>
+
+        <h3 class="products" id="amounttitle">Antal</h3>
+        <select name="antalmeny" class="products" id="amountmenu">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+
+        <h3 class="products" id="productprice">Pris</h3>
+        <p class="products">Totalt: 60kr</p>
+      </section>
+
+      <!--sektion nr2 - summa-->
+      <section class="checkout" id="checkoutsum">
+        <h2>Summa</h2>
+        <div class="summaflex">
+          <h3>Artiklar</h3>
+          <p>60kr</p>
+          <h3>Frakt</h3>
+          <p>22kr</p>
+          <h3>Totalt</h3>
+          <p><b>82kr</b></p>
+          <h3 id="vat">Varav moms</h3>
+          <p>14kr</p>
+        </div>
+      </section>
+
+      <!--sektion nr3 - formulär-->
+      <section>
+        <div class="checkout">
+          <h2>Dina Uppgifter</h2>
+          <form method="post">
+            <label class="firstname">Förnamn
+              <input type="text" name="name" placeholder="Förnamn" required>
+            </label>
+            <label class="secondname">Efternamn
+              <input type="text" name="name" placeholder="Efternamn" required>
+            </label>
+
+            <label class="land">Land
+              <select name="land" id="land">
+                <option value="Sverige">Sverige</option>
+                <option value="Danmark">Danmark</option>
+                <option value="Norge">Norge</option>
+                <option value="Finland">Finland</option>
+              </select>
+            </label>
+
+            <label class="address"> Adress
+              <input type="text" name="adress" placeholder="Adress" required>
+            </label>
+
+            <label class="postcode"> Postnummer
+              <input type="text" name="postnummer" placeholder="Postnummer" required>
+            </label>
+
+            <label class="city">Ort
+              <input type="text" name="ort" placeholder="Ort" required>
+            </label>
+
+            <label class="email">E-post
+              <input type="email" name="email" placeholder="E-post" required>
+            </label>
+            <label class="phonenumb"> Telefonnummer (Frivilligt)
+              <input type="tel" name="phonenumber" placeholder="Telefonnummer">
+            </label>
+            <button id="continue"><b>Fortsätt</b></button>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <section class="about">
+      <div class="about-left">
+        <h4>Om</h4>
+        <ul>
+          <li>Om oss</li>
+          <li>Frakt och leverans</li>
+          <li>Köpvillkor</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="about-right">
+        <h4>Kontakta oss</h4>
+        <ul>
+          <li>Telefon: 031- 00 00 00</li>
+          <li>Email: skitfiske@påhittad.se</li>
+          <li>Kundtjänst</li>
+        </ul>
+      </div>
+    </section>
+
+    <!--Social media-->
+    <div class="socialmedia">
+      <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    <p id="copyright">Copyright &#169; 2023 FridaK</p>
+  </footer>
+</body>
+
+</html>

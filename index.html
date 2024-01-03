@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SkitFiske - Fiskeutrustning online</title>
+  <meta name="description"
+    content="SkitFiske erbjuder ett brett utbud av fiskeprodukter, kläder, förvaring, båttillbehör och allt annat du behöver för ditt fiskeäventyr">
+
+  <script src="https://kit.fontawesome.com/9d183035fc.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <header>
+    <a href="index.html"><img src="ikoner/skitfiske33.png" alt="logga" id="logo"></a>
+
+    <div class="searchcontainer">
+      <input type="search" id="search" name="search" placeholder="Sök efter produkter..">
+      <button id="searchbutton">Sök</button>
+    </div>
+
+    <div class="icons">
+      <a href=""><img src="ikoner/supp24.png" alt="Support" class="icon"></a>
+      <a href=""><img src="ikoner/user24.png" alt="Profil" class="icon"></a>
+      <a href="kundkorg.html"><img src="ikoner/cart24.png" alt="Kundvagn" class="icon"></a>
+    </div>
+  </header>
+
+  <!--Hamburger menu function inspired by: https://www.youtube.com/watch?v=4996fn82c4c-->
+  <nav id="hamburgernav">
+    <label for="hamburger">&#9776;</label>
+    <input type="checkbox" id="hamburger">
+
+    <div id="hamburgeritems">
+      <a href="">Fiskeutrustning</a>
+      <a href="">Kläder</a>
+      <a href="">Förvaring</a>
+      <a href="">Tillbehör</a>
+      <a href="">Båttillbehör</a>
+      <a href="">Kampanj</a>
+    </div>
+  </nav>
+
+  <main>
+    <img src="mainbild/fiskebild-640w.jpg"
+      srcset="mainbild/fiskebild-640w.jpg 640w, mainbild/fiskebild-1000w.jpg 1000w, mainbild/fiskebild-1280w.jpg 1280w"
+      sizes="100vw" alt="Fiskespö vid havet" id="mainimg">
+
+    <h1>"SkitFiske"</h1>
+    <p>För alla vet att "lycka till" bara ger otur!</p>
+
+    <!--Product cards begins-->
+    <section> <!--Section ''Fiskeutrustning'''-->
+      <h2 class="category">Fiskeutrustning</h2>
+      <p class="categorytext">Populärast inom fiskeutrustning</p>
+      <div class="productgallery">
+        <article class="productcards">
+          <a href=""><img src="fiskedrag/spinner.jpg" alt="spinnare" class="products"></a>
+          <h3>Spinnare</h3>
+          <p class="price"><b>60kr</b></p>
+          <button class="productbutton">Lägg till</button>
+        </article>
+
+        <article class="productcards">
+          <a href=""><img src="fiskedrag/sked.jpg" alt="skeddrag" class="products"></a>
+          <h3>Skeddrag</h3>
+          <p class="price"><b>75kr</b></p>
+          <button class="productbutton">Lägg till</button>
+        </article>
+
+        <article class="productcards">
+          <a href=""><img src="fiskedrag/spinnare-svart.jpg" alt="spinnare i färgen svart" class="products"></a>
+          <h3>Spinnare - svart</h3>
+          <p class="price"><b>89kr</b></p>
+          <button class="productbutton">Lägg till</button>
+        </article>
+
+        <article class="productcards">
+          <a href=""><img src="fiskedrag/svart-rulle.jpg" alt="haspelrulle" class="products"></a>
+          <h3>Haspelrulle</h3>
+          <p class="price"><b>399kr</b></p>
+          <button class="productbutton">Lägg till</button>
+        </article>
+
+        <article class="productcards">
+          <a href=""><img src="fiskedrag/wobbler.jpg" alt="wobbler" class="products"></a>
+          <h3>Wobbler</h3>
+          <p class="price"><b>79kr</b></p>
+          <button class="productbutton">Lägg till</button>
+        </article>
+      </div>
+    </section>
+
+    <section> <!--Section ''Kläder'''-->
+      <h2 class="category">Kläder</h2>
+      <p class="categorytext">Populärast inom Kläder</p>
+      <div class="productgallery">
+        <article class="productcards">
+          <a href=""><img src="kläder/stövel.jpg" alt="stövlar" class="products"></a>
+          <h3>Stövlar</h3>
+          <p class="price"><b>399kr</b></p>
+          <button class="productbutton">Lägg till</button>
+        </article>
+
+        <article class="productcards">
+          <a href=""><img src="kläder/regnjackagul.jpg" alt="regnajacka" class="products"></a>
+          <h3>Regnjacka</h3>
+          <p class="price"><b>349kr</b></p>
+          <button class="productbutton">Lägg till</button>
+        </article>
+
+        <article class="productcards">
+          <a href=""><img src="kläder/regnset.jpg" alt="regnset" class="products"></a>
+          <h3>Regnset</h3>
+          <p class="price"><b>1499kr</b></p>
+          <button class="productbutton">Lägg till</button>
+        </article>
+
+        <article class="productcards">
+          <a href=""><img src="kläder/jackasvart.jpg" alt="regnjacka i färgen svart" class="products"></a>
+          <h3>Regnjacka</h3>
+          <p class="price"><b>499kr</b></p>
+          <button class="productbutton">Lägg till</button>
+        </article>
+
+        <article class="productcards">
+          <a href=""><img src="kläder/fiskehatt.jpg" alt="fiskehatt" class="products"></a>
+          <h3>Fiskehatt</h3>
+          <p class="price"><b>129kr</b></p>
+          <button class="productbutton">Lägg till</button>
+        </article>
+      </div>
+    </section>
+
+    <section> <!--Section ''Förvaring'''-->
+      <h2 class="category">Förvaring</h2>
+      <p class="categorytext">Populärast inom förvaring</p>
+      <div class="productgallery">
+        <article class="productcards">
+          <a href=""><img src="Förvaring/fiskelåda.jpg" alt="beteslåda" class="products"></a>
+          <h3>Beteslåda</h3>
+          <p class="price"><b>59kr</b></p>
+          <button class="productbutton">Lägg till</button>
+        </article>
+
+        <article class="productcards">
+          <a href=""><img src="Förvaring/fiskelåda-2.jpg" alt="förvaringslåda med svart botten" class="products"></a>
+          <h3>Förvaringslåda</h3>
+          <p class="price"><b>119kr</b></p>
+          <button class="productbutton">Lägg till</button>
+        </article>
+
+        <article class="productcards">
+          <a href=""><img src="Förvaring/flugfiske-låda.jpg" alt="förvaringslåda för flugfiske" class="products"></a>
+          <h3>Flugfiske - förvaringslåda</h3>
+          <p class="price"><b>99kr</b></p>
+          <button class="productbutton">Lägg till</button>
+        </article>
+
+        <article class="productcards">
+          <a href=""><img src="Förvaring/förvaring-plast.jpg" alt="genomskinlig förvaringslåda" class="products"></a>
+          <h3>Förvaringslåda - genomskinlig </h3>
+          <p class="price"><b>89kr</b></p>
+          <button class="productbutton">Lägg till</button>
+        </article>
+
+        <article class="productcards">
+          <a href=""><img src="Förvaring/flugfiske-liten.jpg" alt="förvaringsask för flugfiske" class="products"></a>
+          <h3>Flugfiske - förvaringsask</h3>
+          <p class="price"><b>69kr</b></p>
+          <button class="productbutton">Lägg till</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <section class="about">
+      <div class="about-left">
+        <h4>Om</h4>
+        <ul>
+          <li>Om oss</li>
+          <li>Frakt och leverans</li>
+          <li>Köpvillkor</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="about-right">
+        <h4>Kontakta oss</h4>
+        <ul>
+          <li>Telefon: 031- 00 00 00</li>
+          <li>Email: skitfiske@påhittad.se</li>
+          <li>Kundtjänst</li>
+        </ul>
+      </div>
+    </section>
+
+    <!--Sociala medier-->
+    <div class="socialmedia">
+      <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    <p id="copyright">Copyright &#169; 2023 FridaK</p>
+  </footer>
+</body>
+
+</html>
